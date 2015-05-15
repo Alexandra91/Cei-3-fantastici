@@ -47,4 +47,8 @@ public class EndUserSteps extends ScenarioSteps {
 		loginpage.clickOnSignInButton();
 	}
     
+	@Step 
+	public void clickMultipleTimes(int times){
+		vacationspage.clickMultipleTimes(times);
+	}
 }

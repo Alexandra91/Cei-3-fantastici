@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 import com.steps.EndUserSteps;
 
 @RunWith(ThucydidesRunner.class)
-public class SearchByKeywordStory {
+public class RazvanTests {
 
     @Managed(uniqueSession = true)
     public WebDriver webdriver;
@@ -34,7 +34,7 @@ public class SearchByKeywordStory {
     	endUser.completePassword("evoportal");
     	endUser.clickOnSignInButton();
     	endUser.clickOnVacation(); 
-    	
+    	endUser.clickMultipleTimes(50);
     }
     
     
