@@ -30,8 +30,8 @@ public class SearchByKeywordStory {
     public void logInEvozone(){
     	endUser.openLogInPage();
     	endUser.clickOnSignIn(); 
-    	endUser.completeUsername("razvanratiu");
-    	endUser.completePassword("Hateme.29");
+    	endUser.completeUsername("malu.ioan1");
+    	endUser.completePassword("evoportal");
     	endUser.clickOnSignInButton();
     	endUser.clickOnVacation(); 
     	
