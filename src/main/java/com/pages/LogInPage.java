@@ -4,6 +4,8 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
+
+
 public class LogInPage extends PageObject{
 	@FindBy(id = "_58_login")
 	private WebElementFacade username;
