@@ -4,7 +4,7 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.LogInPage;
-import com.pages.VacationTracker;
+import com.pages.VacationTrackerPage;
 import com.pages.VacationsPage; 
 import com.pages.DashboardPage;
 
@@ -16,7 +16,7 @@ public class EndUserSteps extends ScenarioSteps {
 	DashboardPage dashboardpage; 
 	LogInPage loginpage; 
 	VacationsPage vacationspage;
-	VacationTracker vacationTracker;
+	VacationTrackerPage vacationTrackerPage;
 
 	@Step
 	public void clickOnSignIn() {
@@ -36,7 +36,7 @@ public class EndUserSteps extends ScenarioSteps {
 
 	@Step
 	public void openLogInPage() {
-		dashboardpage.open();
+		getDriver().get("http://172.22.4.88:9090/home;jsessionid=DAB59B4DD6905C84B9C29F69C042C691");
 	}
 
 	@Step
@@ -51,7 +51,7 @@ public class EndUserSteps extends ScenarioSteps {
 	
 	@Step
 	public void clickOnTrack() {
-		vacationTracker.clickOnTrackButton();
+		vacationTrackerPage.clickOnTrackButton();
 	}
 	
 	
