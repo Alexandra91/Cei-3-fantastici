@@ -6,7 +6,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 import com.pages.LogInPage;
 import com.pages.VacationsPage; 
 import com.pages.DashboardPage;
-
+import com.pages.MyRequestsPage;
 
 
 public class EndUserSteps extends ScenarioSteps {
@@ -14,7 +14,8 @@ public class EndUserSteps extends ScenarioSteps {
 	private static final long serialVersionUID = -5341562730800634047L;
 	DashboardPage dashboardpage; 
 	LogInPage loginpage; 
-	VacationsPage vacationspage;
+	VacationsPage vacationspage; 
+	MyRequestsPage myrequestspage;
 
 	@Step
 	public void clickOnSignIn() {
@@ -49,6 +50,8 @@ public class EndUserSteps extends ScenarioSteps {
     
 	@Step 
 	public void clickMultipleTimes(int times){
-		vacationspage.clickMultipleTimes(times);
-	}
+		myrequestspage.clickMultipleTimes(times);
+	}	
+	
+	
 }

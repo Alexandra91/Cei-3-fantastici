@@ -1,4 +1,5 @@
 package com;
+
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Pending;
@@ -7,6 +8,7 @@ import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.junit.runners.ThucydidesRunner;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -30,8 +32,8 @@ public class RazvanTests {
     public void logInEvozone(){
     	endUser.openLogInPage();
     	endUser.clickOnSignIn(); 
-    	endUser.completeUsername("malu.ioan1");
-    	endUser.completePassword("evoportal");
+    	endUser.completeUsername("razvanratiu");
+    	endUser.completePassword("Hateme.29");
     	endUser.clickOnSignInButton();
     	endUser.clickOnVacation(); 
     	endUser.clickMultipleTimes(50);
