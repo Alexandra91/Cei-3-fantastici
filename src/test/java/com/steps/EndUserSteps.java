@@ -1,6 +1,7 @@
 package com.steps;
 
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.LogInPage;
@@ -22,7 +23,6 @@ public class EndUserSteps extends ScenarioSteps {
 	public void clickOnSignIn() {
 		dashboardpage.clickOnSignIn();
 	}
-
 
 	@Step
 	public void completeUsername(String username) {
@@ -54,6 +54,12 @@ public class EndUserSteps extends ScenarioSteps {
 		vacationTracker.clickOnTrackButton();
 	}
 	
-	
-    
+	@StepGroup
+    public void login_evoportal(String user, String pass) {
+		openLogInPage();
+		clickOnSignIn();
+		completeUsername(user);
+		completePassword(pass);
+    	clickOnSignInButton();
+	} 
 }
