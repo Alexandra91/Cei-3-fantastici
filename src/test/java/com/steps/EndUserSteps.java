@@ -6,21 +6,19 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.LogInPage;
 import com.pages.VacationTrackerPage;
-import com.pages.VacationsPage; 
+import com.pages.VacationsPage;
 import com.pages.DashboardPage;
 import com.pages.MyRequestsPage;
-
 
 public class EndUserSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = -5341562730800634047L;
-	DashboardPage dashboardpage; 
-	LogInPage loginpage; 
+	DashboardPage dashboardpage;
+	LogInPage loginpage;
 
-	VacationsPage vacationspage; 
+	VacationsPage vacationspage;
 	MyRequestsPage myrequestspage;
-	VacationTrackerPage vacationTrackerPage; 
-	
+	VacationTrackerPage vacationTrackerPage;
 
 	@Step
 	public void clickOnSignIn() {
@@ -39,7 +37,8 @@ public class EndUserSteps extends ScenarioSteps {
 
 	@Step
 	public void openLogInPage() {
-		getDriver().get("http://172.22.4.88:9090/home;jsessionid=DAB59B4DD6905C84B9C29F69C042C691");
+		getDriver()
+				.get("http://172.22.4.88:9090/home;jsessionid=DAB59B4DD6905C84B9C29F69C042C691");
 	}
 
 	@Step
@@ -51,26 +50,34 @@ public class EndUserSteps extends ScenarioSteps {
 	public void clickOnSignInButton() {
 		loginpage.clickOnSignInButton();
 	}
-	
+
 	@Step
 	public void clickOnTrack() {
 		vacationTrackerPage.clickOnTrackButton();
 	}
-	
-	
-    
-	@Step 
-	public void clickMultipleTimes(int times){
+
+	@Step
+	public void clickMultipleTimes(int times) {
 		myrequestspage.clickMultipleTimes(times);
-	}	
-	
-	
+	}
+
 	@StepGroup
-    public void login_evoportal(String user, String pass) {
+	public void login_evoportal(String user, String pass) {
 		openLogInPage();
 		clickOnSignIn();
 		completeUsername(user);
 		completePassword(pass);
-    	clickOnSignInButton();
-	} 
+		clickOnSignInButton();
+	}
+
+	@Step
+	public void clickOnApplybutton() {
+		myrequestspage.clickOnApplyButton();
+	}
+
+	@Step
+	public void selectItemForMyRequests(String items) {
+		myrequestspage.markOption(items);
+		// myrequestspage.selectItemForMyRequests(items);
+	}
 }
