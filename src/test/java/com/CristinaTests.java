@@ -32,6 +32,7 @@ public class CristinaTests {
     	endUser.clickOnSignInButton();
 
     	endUser.clickOnVacation(); 
+    	
     	endUser.clickOnTrack();
     }
     
