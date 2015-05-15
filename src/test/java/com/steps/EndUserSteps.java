@@ -1,13 +1,14 @@
 package com.steps;
 
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.LogInPage;
 import com.pages.VacationTrackerPage;
 import com.pages.VacationsPage; 
 import com.pages.DashboardPage;
-
+import com.pages.MyRequestsPage;
 
 
 public class EndUserSteps extends ScenarioSteps {
@@ -15,14 +16,16 @@ public class EndUserSteps extends ScenarioSteps {
 	private static final long serialVersionUID = -5341562730800634047L;
 	DashboardPage dashboardpage; 
 	LogInPage loginpage; 
-	VacationsPage vacationspage;
-	VacationTrackerPage vacationTrackerPage;
+
+	VacationsPage vacationspage; 
+	MyRequestsPage myrequestspage;
+	VacationTrackerPage vacationTrackerPage; 
+	
 
 	@Step
 	public void clickOnSignIn() {
 		dashboardpage.clickOnSignIn();
 	}
-
 
 	@Step
 	public void completeUsername(String username) {
@@ -56,4 +59,18 @@ public class EndUserSteps extends ScenarioSteps {
 	
 	
     
+	@Step 
+	public void clickMultipleTimes(int times){
+		myrequestspage.clickMultipleTimes(times);
+	}	
+	
+	
+	@StepGroup
+    public void login_evoportal(String user, String pass) {
+		openLogInPage();
+		clickOnSignIn();
+		completeUsername(user);
+		completePassword(pass);
+    	clickOnSignInButton();
+	} 
 }
