@@ -4,6 +4,7 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.LogInPage;
+import com.pages.VacationTracker;
 import com.pages.VacationsPage; 
 import com.pages.DashboardPage;
 
@@ -15,6 +16,7 @@ public class EndUserSteps extends ScenarioSteps {
 	DashboardPage dashboardpage; 
 	LogInPage loginpage; 
 	VacationsPage vacationspage;
+	VacationTracker vacationTracker;
 
 	@Step
 	public void clickOnSignIn() {
@@ -46,5 +48,12 @@ public class EndUserSteps extends ScenarioSteps {
 	public void clickOnSignInButton() {
 		loginpage.clickOnSignInButton();
 	}
+	
+	@Step
+	public void clickOnTrack() {
+		vacationTracker.clickOnTrackButton();
+	}
+	
+	
     
 }

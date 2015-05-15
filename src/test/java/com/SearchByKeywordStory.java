@@ -34,6 +34,7 @@ public class SearchByKeywordStory {
     	endUser.completePassword("evoportal");
     	endUser.clickOnSignInButton();
     	endUser.clickOnVacation(); 
+    	endUser.clickOnTrack();
     	
     }
     
