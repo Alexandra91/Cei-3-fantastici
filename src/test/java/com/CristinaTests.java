@@ -1,5 +1,7 @@
 package com;
 
+import java.text.ParseException;
+
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
@@ -11,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import com.steps.EndUserSteps;
+import com.steps.TrackerSteps;
 @RunWith(SerenityRunner.class)
 public class CristinaTests {
 	
@@ -23,8 +26,11 @@ public class CristinaTests {
     @Steps
     public EndUserSteps endUser;
     
+    @Steps
+    public TrackerSteps trackerSteps;
+    
     @Test
-    public void LogInToEvozon() {
+    public void LogInToEvozon() throws ParseException {
     	endUser.openLogInPage();
     	endUser.clickOnSignIn();
     	endUser.completeUsername("malu.ioan1");
@@ -34,6 +40,10 @@ public class CristinaTests {
     	endUser.clickOnVacation(); 
     	
     	endUser.clickOnTrack();
-    }
+    	trackerSteps.selectStartDate(6,8,2015);
+    	trackerSteps.selectEndDate(7,1,2015);
+    	//trackerSteps.selectAllBuildingField();
+    	//trackerSteps.selectAllBuildingField();
+       }
     
 }
