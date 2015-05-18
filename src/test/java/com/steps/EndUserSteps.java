@@ -8,6 +8,7 @@ import VacationPackage.VacationTrackerPage;
 import com.pages.DashboardPage;
 import com.pages.LogInPage;
 import com.pages.MyRequestsPage;
+import com.pages.MyrequestsContainerPage;
 import com.pages.VacationsPage;
 
 public class EndUserSteps extends ScenarioSteps {
