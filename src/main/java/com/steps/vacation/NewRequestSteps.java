@@ -1,11 +1,12 @@
-package VacationSteps;
+package com.steps.vacation;
 
 import java.text.ParseException;
 
+import com.pages.vacation.CalendarPage;
+import com.pages.vacation.NewVacationRequestPage;
+
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import VacationPackage.CalendarPage;
-import VacationPackage.NewVacationRequestPage;
 
 public class NewRequestSteps extends ScenarioSteps {
 	

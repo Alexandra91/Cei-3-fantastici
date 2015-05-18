@@ -1,4 +1,4 @@
-package com.pages;
+package com.pages.vacation;
 
 import org.junit.Assert;
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -9,7 +9,7 @@ public class VacationsPage extends PageObject {
 	@FindBy(css = "ul.main-menu a[href*='vacation']")
 	private WebElementFacade vacation; 
 	
-	@FindBy(css ="[class='result-column-name'a[href*='type']")
+	@FindBy(css ="[class='result-column-name']")
 	private WebElementFacade typecolumn;
 	
 	public void clickOnVacationButton() {

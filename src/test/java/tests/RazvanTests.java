@@ -1,4 +1,4 @@
-package VacationTests;
+package tests;
 
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.ManagedPages;

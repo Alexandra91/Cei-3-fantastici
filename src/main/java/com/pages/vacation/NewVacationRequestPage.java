@@ -1,4 +1,4 @@
-package VacationPackage;
+package com.pages.vacation;
 
 import java.util.List;
 

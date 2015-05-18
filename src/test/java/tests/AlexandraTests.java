@@ -1,4 +1,4 @@
-package VacationTests;
+package tests;
 
 import java.text.ParseException;
 
@@ -12,9 +12,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import VacationSteps.NewRequestSteps;
-
 import com.steps.LogInSteps;
+import com.steps.vacation.NewRequestSteps;
 
 @RunWith(ThucydidesRunner.class)
 public class AlexandraTests {

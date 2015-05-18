@@ -1,4 +1,4 @@
-package VacationPackage;
+package com.pages.vacation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

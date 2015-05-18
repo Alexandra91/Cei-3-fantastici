@@ -3,12 +3,13 @@ package com.steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
-import VacationPackage.MyRequestsPage;
-import VacationPackage.VacationTrackerPage;
-import VacationPackage.VacationsPage;
 
-import com.pages.LogInPage;
 import com.pages.DashboardPage;
+import com.pages.LogInPage;
+import com.pages.vacation.MyRequestsContainerPage;
+import com.pages.vacation.MyRequestsPage;
+import com.pages.vacation.VacationTrackerPage;
+import com.pages.vacation.VacationsPage;
 
 public class LogInSteps extends ScenarioSteps {
 
@@ -18,6 +19,7 @@ public class LogInSteps extends ScenarioSteps {
 
 	VacationsPage vacationspage;
 	MyRequestsPage myrequestspage;
+	MyRequestsContainerPage myRequestsContainerPage;
 	VacationTrackerPage vacationTrackerPage;
 
 	@Step
@@ -79,5 +81,10 @@ public class LogInSteps extends ScenarioSteps {
 	public void selectItemForMyRequests(String items) {
 		myrequestspage.markOption(items);
 		// myrequestspage.selectItemForMyRequests(items);
+	}
+	
+	@Step 
+	public void checkVacationType(String vactype){
+		myRequestsContainerPage.checkVacationType(vactype);
 	}
 }
