@@ -1,16 +1,19 @@
-package com;
+package VacationTests;
 
-import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.ManagedPages;
+import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
+import net.thucydides.core.annotations.Managed;
 import net.thucydides.junit.runners.ThucydidesRunner;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.steps.EndUserSteps;
+import com.steps.LogInSteps;
 
 @RunWith(ThucydidesRunner.class)
 public class RazvanTests {
@@ -22,11 +25,11 @@ public class RazvanTests {
     public Pages pages;
 
     @Steps
-    public EndUserSteps endUser;
+    public LogInSteps endUser;
 
   
     @Test				
-    public void VerifyingToSeeIfClickingOnTypeButtonMakesTheTableDisappear(){
+    public void logInEvozone(){
     	endUser.openLogInPage();
     	endUser.clickOnSignIn(); 
     	endUser.completeUsername("razvanratiu");
@@ -37,37 +40,36 @@ public class RazvanTests {
     	
     }
     
-     
+   
+
+
 	@Test 
-    public void ClickOnOneOptionSelectBoxThenClickApplyAndSeeIfTheTableUpdatesCorectly(){
+    public void applyButtonNameTesting(){
     	endUser.openLogInPage();
     	endUser.clickOnSignIn(); 
     	endUser.completeUsername("razvanratiu");
     	endUser.completePassword("Hateme.29");
     	endUser.clickOnSignInButton();
     	endUser.clickOnVacation(); 
-    	endUser.selectItemForMyRequests("Holiday");
-    	endUser.clickOnApplybutton();	
-    	endUser.checkVacationType("Holiday");
-	} 
-	
-    	
-	@Test 
-	public void asdf(){
-    	endUser.openLogInPage();
-    	endUser.clickOnSignIn(); 
-    	endUser.completeUsername("razvanratiu");
-    	endUser.completePassword("Hateme.29");
-    	endUser.clickOnSignInButton();
-    	endUser.clickOnVacation(); 
-    	endUser.selectItemForMyRequests("Holiday");
-    	endUser.selectItemForMyRequests("Withdrawn");
-    	endUser.selectItemForMyRequests("1 - 5");
-    	endUser.clickOnApplybutton();	 
-    	
+    	endUser.clickOnApplybutton();
 	}
-
-
-
+  
+	
+	@Test 
+    public void selectCheckboxItems(){
+    	endUser.openLogInPage();
+    	endUser.clickOnSignIn(); 
+    	endUser.completeUsername("razvanratiu");
+    	endUser.completePassword("Hateme.29");
+    	endUser.clickOnSignInButton();
+    	endUser.clickOnVacation(); 
+    	endUser.selectItemForMyRequests("Holiday");
+    	endUser.selectItemForMyRequests("Pending");
+    	endUser.selectItemForMyRequests("21 - 50");
+	}
+	
+	
+	
+	
 }	
 	

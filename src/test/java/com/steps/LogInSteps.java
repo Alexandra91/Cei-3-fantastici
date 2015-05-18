@@ -3,20 +3,19 @@ package com.steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
+import VacationPackage.MyRequestsPage;
 import VacationPackage.VacationTrackerPage;
+import VacationPackage.VacationsPage;
 
-import com.pages.DashboardPage;
 import com.pages.LogInPage;
-import com.pages.MyRequestsPage;
-import com.pages.VacationsPage;
+import com.pages.DashboardPage;
 
-public class EndUserSteps extends ScenarioSteps {
+public class LogInSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = -5341562730800634047L;
-	
 	DashboardPage dashboardpage;
 	LogInPage loginpage;
-	MyrequestsContainerPage myrequestscontainerpage;
+
 	VacationsPage vacationspage;
 	MyRequestsPage myrequestspage;
 	VacationTrackerPage vacationTrackerPage;
@@ -81,15 +80,4 @@ public class EndUserSteps extends ScenarioSteps {
 		myrequestspage.markOption(items);
 		// myrequestspage.selectItemForMyRequests(items);
 	}
-
-	@Step
-	public void clickOnTypeColumn(){
-		myrequestspage.clickOnTypeColumn();
-	}
-	
-	@Step 
-	public void checkVacationType(String vactype){
-		myrequestscontainerpage.checkVacationType(vactype);
-	}
-
 }

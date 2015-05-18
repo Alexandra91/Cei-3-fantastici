@@ -1,4 +1,4 @@
-package com;
+package VacationTests;
 
 import java.text.ParseException;
 
@@ -12,8 +12,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.steps.EndUserSteps;
-import com.steps.TrackerSteps;
+import VacationSteps.TrackerSteps;
+
+import com.steps.LogInSteps;
 @RunWith(SerenityRunner.class)
 public class CristinaTests {
 	
@@ -24,7 +25,7 @@ public class CristinaTests {
     public Pages pages;
 
     @Steps
-    public EndUserSteps endUser;
+    public LogInSteps endUser;
     
     @Steps
     public TrackerSteps trackerSteps;

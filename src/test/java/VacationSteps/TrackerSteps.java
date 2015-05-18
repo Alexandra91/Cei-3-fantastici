@@ -1,16 +1,17 @@
-package com.steps;
+package VacationSteps;
 
 import java.text.ParseException;
 
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
 import VacationPackage.CalendarPage;
+import VacationPackage.MyRequestsPage;
 import VacationPackage.VacationTrackerPage;
+import VacationPackage.VacationsPage;
 
-import com.pages.DashboardPage;
 import com.pages.LogInPage;
-import com.pages.MyRequestsPage;
-import com.pages.VacationsPage;
+import com.pages.DashboardPage;
 
 
 @SuppressWarnings("serial")
@@ -46,6 +47,5 @@ public class TrackerSteps extends ScenarioSteps {
 		
 	}
 	
-
 			
 }
