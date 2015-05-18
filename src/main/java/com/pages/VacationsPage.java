@@ -9,7 +9,7 @@ public class VacationsPage extends PageObject {
 	@FindBy(css = "ul.main-menu a[href*='vacation']")
 	private WebElementFacade vacation; 
 	
-	@FindBy(css ="[class='result-column-name']")
+	@FindBy(css ="[class='result-column-name'a[href*='type']")
 	private WebElementFacade typecolumn;
 	
 	public void clickOnVacationButton() {

@@ -29,29 +29,34 @@ public class MyRequestsPage extends PageObject{
 	@FindBy(css="input[class='aui-field-input aui-field-input-choice']")
 	private WebElement checkbox;
 
-	@FindBy(css="[class='results-header a[href*='startDate']")
+	@FindBy(css="[class='results-header' a[href*='startDate']")
 	private WebElement startdate;  
 	
-	@FindBy(css="[class='results-header a[href*='endDate']")
+	@FindBy(css="[class='results-header' a[href*='endDate']")
 	private WebElement enddate; 
 	
-	@FindBy(css="[class='results-header a[href*='daysNr']") 
+	@FindBy(css="[class='results-header' a[href*='daysNr']") 
 	private WebElement daysnumber; 
 	
-	@FindBy(css="[class='results-header a[href*='type']")
+	@FindBy(css="[class='results-header' a[href*='type']")
 	private WebElement typecolumn;
 	
-	@FindBy(css="[class='results-header a[href*='lastUpdate']")
+	@FindBy(css="[class='results-header' a[href*='lastUpdate']")
 	private WebElement lastupdate;
 	
-	@FindBy(css="[class='results-header a[href*='status']")
+	@FindBy(css="[class='results-header' a[href*='status']")
 	private WebElement status; 
 	
 	@FindBy(css="[class='aui-paginator-link aui-paginator-page-link' aui-paginator-current-page']") 
 	private WebElement paginatorone;
 	
-	@FindBy(css=".span.aui-paginator-next-link")
+	@FindBy(css="[class='span.aui-paginator-next-link']")
 	private WebElement nextpage; 
+	
+	@FindBy(css="[class='tr.results-row:not(.lfr-template)']")
+	private WebElement typeholidayreturn; 
+	
+	
 	
 	
 	public void markOption(String optionName){

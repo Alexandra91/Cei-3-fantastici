@@ -18,7 +18,7 @@ import com.steps.EndUserSteps;
 @RunWith(ThucydidesRunner.class)
 public class RazvanTests {
 
-    @Managed(uniqueSession = true)
+    @Managed(uniqueSession = false)
     public WebDriver webdriver;
 
     @ManagedPages(defaultUrl = "http://172.22.4.88:9090/home;jsessionid=DAB59B4DD6905C84B9C29F69C042C691")
@@ -29,7 +29,7 @@ public class RazvanTests {
 
   
     @Test				
-    public void ToSeeIfClickingOnTypeButtonMakesTheTableDisappear(){
+    public void VerifyingToSeeIfClickingOnTypeButtonMakesTheTableDisappear(){
     	endUser.openLogInPage();
     	endUser.clickOnSignIn(); 
     	endUser.completeUsername("razvanratiu");
@@ -42,7 +42,7 @@ public class RazvanTests {
     
      
 	@Test 
-    public void CheckingToSeeIfIcanSelecItemsFromSelectBox(){
+    public void ClickOnOneOptionSelectBoxThenClickApplyAndSeeIfTheTableUpdatesCorectly(){
     	endUser.openLogInPage();
     	endUser.clickOnSignIn(); 
     	endUser.completeUsername("razvanratiu");
@@ -50,13 +50,27 @@ public class RazvanTests {
     	endUser.clickOnSignInButton();
     	endUser.clickOnVacation(); 
     	endUser.selectItemForMyRequests("Holiday");
-    	endUser.selectItemForMyRequests("Pending");
-    	endUser.selectItemForMyRequests("21 - 50");
-    	endUser.clickOnApplybutton();
+    	endUser.clickOnApplybutton();	
+    	endUser.checkVacationType("Holiday");
+	} 
+	
+    	
+	@Test 
+	public void asdf(){
+    	endUser.openLogInPage();
+    	endUser.clickOnSignIn(); 
+    	endUser.completeUsername("razvanratiu");
+    	endUser.completePassword("Hateme.29");
+    	endUser.clickOnSignInButton();
+    	endUser.clickOnVacation(); 
+    	endUser.selectItemForMyRequests("Holiday");
+    	endUser.selectItemForMyRequests("Withdrawn");
+    	endUser.selectItemForMyRequests("1 - 5");
+    	endUser.clickOnApplybutton();	 
+    	
 	}
-	
-	
-	
-	
+
+
+
 }	
 	
