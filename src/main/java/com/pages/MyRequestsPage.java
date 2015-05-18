@@ -13,10 +13,7 @@ import net.thucydides.core.pages.PageObject;
 public class MyRequestsPage extends PageObject{
 	@FindBy(css = "ul.main-menu a[href*='vacation']")
 	private WebElementFacade vacation; 
-	
-	@FindBy(css ="[class='result-column-name']")
-	private WebElementFacade typecolumn;
-	
+
 	@FindBy(id="_evovacation_WAR_EvoVacationportlet_applyButton")
 	private WebElementFacade applybutton; 
 	
@@ -32,6 +29,30 @@ public class MyRequestsPage extends PageObject{
 	@FindBy(css="input[class='aui-field-input aui-field-input-choice']")
 	private WebElement checkbox;
 
+	@FindBy(css="[class='results-header a[href*='startDate']")
+	private WebElement startdate;  
+	
+	@FindBy(css="[class='results-header a[href*='endDate']")
+	private WebElement enddate; 
+	
+	@FindBy(css="[class='results-header a[href*='daysNr']") 
+	private WebElement daysnumber; 
+	
+	@FindBy(css="[class='results-header a[href*='type']")
+	private WebElement typecolumn;
+	
+	@FindBy(css="[class='results-header a[href*='lastUpdate']")
+	private WebElement lastupdate;
+	
+	@FindBy(css="[class='results-header a[href*='status']")
+	private WebElement status; 
+	
+	@FindBy(css="[class='aui-paginator-link aui-paginator-page-link' aui-paginator-current-page']") 
+	private WebElement paginatorone;
+	
+	@FindBy(css=".span.aui-paginator-next-link")
+	private WebElement nextpage; 
+	
 	
 	public void markOption(String optionName){
 		element(vacationTypeContainer).waitUntilVisible();
