@@ -52,7 +52,7 @@ public class AlexandraTests {
 		newRequest.endDate(12, 22, 2015);
 		newRequest.holiday();
 		newRequest.save();
-//		newRequest.checkSaveButton("Vacation info");
+		newRequest.checkSaveButton("Your request completed successfully.");
 	}
 	
 	//@Test
@@ -66,7 +66,7 @@ public class AlexandraTests {
 		newRequest.vacationDuration("24 de zile");
 		newRequest.vacationInstitution("spitalul numarul noua");
 		newRequest.save();
-//		newRequest.checkSaveButton("Vacation info");
+		newRequest.checkSaveButton("Your request completed successfully.");
 	}
 	
 //	@Test
@@ -79,11 +79,10 @@ public class AlexandraTests {
 			newRequest.vacationWithoutPayment();
 			newRequest.specialVacation();
 			newRequest.specialVacationChoices();
-//			newRequest.maternityLeave();
 			newRequest.optionalComment();
 			newRequest.enterCommnet("bla bla bla");
 			newRequest.save();
-//			newRequest.checkSaveButton("Vacation info");
+			newRequest.checkSaveButton("Your request completed successfully.");
 		}
 		
 }

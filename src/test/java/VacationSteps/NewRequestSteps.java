@@ -106,9 +106,6 @@ public class NewRequestSteps extends ScenarioSteps {
 //    public void checkCancelButton(String text){
 //    	newVacationRequest.checkCancelButton(text);
 //    }
-//    
-//    @Step
-//    public void checkHolidayVacation(String text){
-//    	newVacationRequest.checkHolidayVacation(text);
-//    }
+  
+
 }
