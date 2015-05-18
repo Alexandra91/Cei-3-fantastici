@@ -1,4 +1,4 @@
-package com;
+package VacationTests;
 
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.ManagedPages;
@@ -13,7 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.steps.EndUserSteps;
+import com.steps.LogInSteps;
 
 @RunWith(ThucydidesRunner.class)
 public class RazvanTests {
@@ -25,7 +25,7 @@ public class RazvanTests {
     public Pages pages;
 
     @Steps
-    public EndUserSteps endUser;
+    public LogInSteps endUser;
 
   
     @Test				

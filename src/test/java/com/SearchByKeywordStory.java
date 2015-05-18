@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.steps.EndUserSteps;
+import com.steps.LogInSteps;
 
 @RunWith(ThucydidesRunner.class)
 public class SearchByKeywordStory {
@@ -23,7 +23,7 @@ public class SearchByKeywordStory {
     public Pages pages;
 
     @Steps
-    public EndUserSteps endUser;
+    public LogInSteps endUser;
 
   
     @Test

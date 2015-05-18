@@ -1,4 +1,4 @@
-package com.pages;
+package VacationPackage;
 
 import org.junit.Assert;
 import net.serenitybdd.core.annotations.findby.FindBy;
