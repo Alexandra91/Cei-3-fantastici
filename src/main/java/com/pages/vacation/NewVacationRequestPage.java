@@ -140,7 +140,7 @@ public class NewVacationRequestPage extends PageObject{
 		boolean found= false;
 		if(successMessage.getText().equals(mesage)){
 			found=true;
-			System.out.println(vacationRequestInfo.getText());	
+//			System.out.println(vacationRequestInfo.getText());	
 		}
 		else {
 			found=false;

@@ -104,6 +104,11 @@ public class NewRequestSteps extends ScenarioSteps {
     }
 	
 //	@Step
+//    public void checkMailInbox(){
+//    	newVacationRequest.ReadingEmail();
+//    }
+	
+//	@Step
 //    public void checkCancelButton(String text){
 //    	newVacationRequest.checkCancelButton(text);
 //    }

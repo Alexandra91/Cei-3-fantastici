@@ -30,7 +30,7 @@ public class AlexandraTests {
 	@Steps
 	public NewRequestSteps newRequest;
 
-	@Test
+	//@Test
 	public void LogIn_and_check_SaveButton_from_New_Vacation_Request_Page() throws ParseException { 	
 		evoportalLogIn.login_evoportal("alexandra.pandele1","evoportal");
 		evoportalLogIn.clickOnVacation(); 
@@ -42,13 +42,13 @@ public class AlexandraTests {
 		newRequest.checkSaveButton("Your request completed successfully.");
 	}   	
 	
-	//@Test
+	@Test
 	public void LogIn_and_check_holidayVacation_from_New_Vacation_Request_Page() throws ParseException{
 		evoportalLogIn.login_evoportal("alexandra.pandele1","evoportal");
 		evoportalLogIn.clickOnVacation(); 
 		newRequest.newVacationRequest();
-		newRequest.startDate(5, 25, 2015);
-		newRequest.endDate(12, 22, 2015);
+		newRequest.startDate(6, 22, 2015);
+		newRequest.endDate(6, 25, 2015);
 		newRequest.holiday();
 		newRequest.save();
 		newRequest.checkSaveButton("Your request completed successfully.");
@@ -59,8 +59,8 @@ public class AlexandraTests {
 		evoportalLogIn.login_evoportal("alexandra.pandele1","evoportal");
 		evoportalLogIn.clickOnVacation(); 
 		newRequest.newVacationRequest();
-		newRequest.startDate(5, 23, 2015);
-		newRequest.endDate(6, 29, 2016);
+		newRequest.startDate(5, 23, 2016);
+		newRequest.endDate(6, 29, 2017);
 		newRequest.vacationWithoutPayment();
 		newRequest.vacationDuration("24 de zile");
 		newRequest.vacationInstitution("spitalul numarul noua");
@@ -68,13 +68,13 @@ public class AlexandraTests {
 		newRequest.checkSaveButton("Your request completed successfully.");
 	}
 	
-//	@Test
+	//@Test
 		public void LogIn_and_check_specialVacation_from_New_Vacation_Request_Page() throws ParseException{
 			evoportalLogIn.login_evoportal("alexandra.pandele1","evoportal");
 			evoportalLogIn.clickOnVacation(); 
 			newRequest.newVacationRequest();
-			newRequest.startDate(5, 23, 2015);
-			newRequest.endDate(6, 29, 2015);
+			newRequest.startDate(3, 23, 2016);
+			newRequest.endDate(3, 23, 2015);
 			newRequest.vacationWithoutPayment();
 			newRequest.specialVacation();
 			newRequest.specialVacationChoices();
