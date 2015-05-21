@@ -3,9 +3,9 @@ package com.pages.vacation;
 import java.util.*;
 import javax.mail.*;
 
-public class ReadingEmail {
+public class ReadingEmailPage {
    
-	public static void main(String[] args) {
+	public String readingEmail() {
         Properties props = new Properties();
         props.setProperty("mail.store.protocol", "imaps");
         props.setProperty("mail.imaps.port", "993");
@@ -32,12 +32,20 @@ public class ReadingEmail {
          	mailBody = mailBody.replace("<br/>", "");
          	mailBody = mailBody.replace("\r\n", "");
          	mailBody = mailBody.replace("	", "");
-         	mailBody = mailBody.replace("<!--   Cheers,  The EvoPortal Team-->  Cheers,  The EvoPortal Team", "");
+         	mailBody = mailBody.replace("<strong>", "");
+         	mailBody = mailBody.replace("</strong>", "");
+         	mailBody = mailBody.replace("<b>", "");
+         	mailBody = mailBody.replace("</b>", "");
+         	mailBody = mailBody.replace("<i>", "");
+         	mailBody = mailBody.replace("</i>", "");
          	mailBody = mailBody.trim();
-        	System.out.println(mailBody);         
-
+        	System.out.println(mailBody);   
+        	return mailBody;
+        	        	           
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
     }
+	
 }

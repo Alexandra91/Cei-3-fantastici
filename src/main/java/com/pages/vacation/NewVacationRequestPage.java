@@ -9,6 +9,8 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
+import com.tools.Constants;
+
 public class NewVacationRequestPage extends PageObject{
 
 	@FindBy(css="a[href*='menuItem=new-request']")
@@ -146,10 +148,6 @@ public class NewVacationRequestPage extends PageObject{
 			found=false;
 			Assert.assertTrue("There appear an error message!", found);
 		}
-	}
-
-	public void selectSpecialVacation(String option){
-		
 	}
 
 }

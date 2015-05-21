@@ -4,6 +4,7 @@ import java.text.ParseException;
 
 import com.pages.vacation.CalendarPage;
 import com.pages.vacation.NewVacationRequestPage;
+import com.pages.vacation.ReadingEmailPage;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -13,6 +14,7 @@ public class NewRequestSteps extends ScenarioSteps {
 	private static final long serialVersionUID = 1L;
 	NewVacationRequestPage newVacationRequest;
 	CalendarPage calendar;
+	ReadingEmailPage readingEmail;
 	
 	@Step
 	public void newVacationRequest(){
@@ -97,16 +99,19 @@ public class NewRequestSteps extends ScenarioSteps {
 		newVacationRequest.click_cancel();
 	}
 	
-		
 	@Step
     public void checkSaveButton(String message){
     	newVacationRequest.checkSaveButton(message);
     }
 	
-//	@Step
-//    public void checkMailInbox(){
-//    	newVacationRequest.ReadingEmail();
-//    }
+	@Step
+    public void checkMailInbox(String expectedEmail){
+		  String content = readingEmail.readingEmail();
+		  if(content.contentEquals(expectedEmail)){
+			  
+		  };
+		 }
+	
 	
 //	@Step
 //    public void checkCancelButton(String text){
